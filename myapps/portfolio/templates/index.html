@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+{% load static %}
+{%block title%} Home {%endblock%}
+{%block content%}
+<link href="{% static 'styles.css' %}" rel="stylesheet">
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-main text-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SHKZ</a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse list-item" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#banner">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#about">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">SKILLS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">PORTFOLIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">CONTACTS</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>  
+  </nav>
+</div>
+<section id="banner" class="">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h1 class="cs-title">Gamer Gallery</h1>
+      <p class="cs-text">
+        Explore, where my passion for gaming and coding comes to life. Discover my projects, see my
+        progress, and connect with others who share similar interests. Join me on this journey where creativity and
+        technology meet.
+      </p>
+      <div class="cs-button-group">
+        <a href="#about" class="cs-button-solid cs-button1">ABOUT ME</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Image -->
+  <picture class="cs-background">
+    <source media="(max-width: 600px)" srcset="{% static 'IMG/BG-HI3.png' %}">
+    <source media="(min-width: 601px)" srcset="{% static 'IMG/BG-HI3.png' %}">
+    <img loading="lazy" decoding="async" src="{% static 'IMG/BG-HI3.png' %}" alt="field" width="1920" height="1200"
+      aria-hidden="true">
+  </picture>
+
+</section>
+
+<div class="spacer" id="shownav"></div>
+
+<section id="about" class="section">
+  <div class="container text-center d-flex align-items-center div-border">
+    <div class="row">
+      <div class="col-12 col-lg-6 text-start">
+        <h2>Hello, I am Sean Wilton</h2>
+        <p class="intro-paragraph">“deeply interested in both computer programming and gaming. I love coding in
+          languages such as Java,
+          Python, and JavaScript, always eager to expand my knowledge and skills."</p>
+      </div>
+      <div class="col-12 col-lg-6 h-75 pt-4 d-flex justify-content-center">
+        <img src="{% static 'IMG/PROFILE.png' %}" alt="Placeholder Image" class="profile">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="spacer"></div>
+<section id="skills" class="">
+  <h1 class="text-center pb-4">SOFTWARE DEVELOPMENT</h1>
+  <div class="container pb-5">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 pb-4 d-flex justify-content-center">
+        <div class="card">
+          <div class="card-img-top">
+            <img src="https://abrudz.github.io/logos/Python.svg" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <p class="card-text">I'm just starting out with Python, learning to automate tasks and create simple
+              applications with its intuitive syntax.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 pb-4 d-flex justify-content-center">
+        <div class="card">
+          <div class="card-img-top">
+            <img src="https://abrudz.github.io/logos/Java.svg" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <p class="card-text">I'm just starting to learn Java, exploring how to build simple programs for computers
+              and websites using its powerful tools.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 pb-4 d-flex justify-content-center">
+        <div class="card">
+          <div class="card-img-top">
+            <img src="https://abrudz.github.io/logos/JS.svg" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <p class="card-text">I'm starting to understand JavaScript, learning how to make websites more interactive
+              and fun by adding simple animations and features.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills2" class="">
+  <h1 class="text-center text-white pb-4">WEB DEVELOPMENT</h1>
+  <div class="container pb-5">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 pb-4 d-flex justify-content-center">
+        <div class="card">
+          <div class="card-img-top">
+            <img src="https://abrudz.github.io/logos/Python.svg" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <p class="card-text">As a beginner in web development, I'm exploring Python's potential to create dynamic
+              web applications and manage server-side logic using frameworks like Django.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 pb-4 d-flex justify-content-center">
+        <div class="card">
+          <div class="card-img-top">
+            <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <p class="card-text">In my early stages of web development, I'm discovering how Bootstrap simplifies the
+              creation of responsive and visually appealing websites with its pre-designed components and responsive
+              grid system.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 pb-4 d-flex justify-content-center">
+        <div class="card">
+          <div class="card-img-top">
+            <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <p class="card-text">Just starting out in web development, I'm uncovering Django's capabilities to build
+              robust and scalable web applications, leveraging its built-in features for authentication, URL routing,
+              and database management.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="spacer"></div>
+
+<section id="projects" class="pt-4 pt-xs-5 pb-4 pb-xs-5">
+  <h1 class="text-center mb-4">PROJECTS</h1>
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <img class="bd-placeholder-img-lg img-fluid mx-auto java" width="1280px" height="700px"
+                src="{% static 'projects/COMPILER.png' %}" alt="image" data-bs-toggle="modal"
+                data-bs-target="#projectModal1" />
+            </div>
+            <div class="col-md-6">
+              <div class="description-box">
+                <h3 class="mt-4">PORTFOLIO COMPILER</h3>
+                <p class="lead">
+                  TEST
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <img class="bd-placeholder-img-lg img-fluid mx-auto java" width="1280px" height="700px"
+                src="{% static 'projects/WEBSHOP.png' %}" alt="image" data-bs-toggle="modal"
+                data-bs-target="#projectModal2" />
+            </div>
+            <div class="col-md-6">
+              <div class="description-box">
+                <h3 class="mt-4">WEBSITE SHOP</h3>
+                <p class="lead">
+                  TEST
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add other carousel items here -->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+{%endblock%}
