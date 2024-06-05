@@ -109,6 +109,10 @@ body {
 
 
 
+.navbar-main {
+    display: none;
+}
+
 
 .navbar-main {
   position: fixed;

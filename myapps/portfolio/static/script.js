@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     var sections = $('.section');
     var windowHeight = $(window).height();
@@ -9,7 +8,7 @@ $(document).ready(function() {
         sections.each(function() {
             var position = $(this).offset().top;
 
-            if (position < scrollTop + windowHeight * 0.6 && position + $(this).height() > scrollTop + windowHeight * 0.2) {
+            if (position < scrollTop + windowHeight * 0.8 && position + $(this).height() > scrollTop + windowHeight * 0.2) {
                 $(this).addClass('visible');
             } else {
                 $(this).removeClass('visible');
@@ -24,6 +23,15 @@ $(document).ready(function() {
     $(window).on('scroll', checkVisibility);
 });
 
+function pauseVideos() {
+    var videos = document.querySelectorAll('video');
+    videos.forEach(function(video) {
+        video.pause();
+    });
+     setTimeout(function() {
+        $('#videoCarousel').carousel('pause'); // Pause the carousel
+    }, 100);
+}
 
 function toggleNavbar() {
     var section2 = document.getElementById('about');
@@ -40,10 +48,5 @@ function toggleNavbar() {
     }
 }
 
-// Call the toggleNavbar function when the page loads
-window.addEventListener('load', toggleNavbar);
-
-// Call the toggleNavbar function when the user scrolls
-window.addEventListener('scroll', toggleNavbar);
 
 
