@@ -9,7 +9,7 @@ $(document).ready(function() {
         sections.each(function() {
             var position = $(this).offset().top;
 
-            if (position < scrollTop + windowHeight * 0.4 && position + $(this).height() > scrollTop + windowHeight * 0.2) {
+            if (position < scrollTop + windowHeight * 0.6 && position + $(this).height() > scrollTop + windowHeight * 0.2) {
                 $(this).addClass('visible');
             } else {
                 $(this).removeClass('visible');
